@@ -5,56 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My HTML Portfolio | Eiren Castano</title>
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Inter and Space Grotesk -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Particle Background -->
+    <canvas id="particles-bg"></canvas>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">EC.</a>
+            <a href="#" class="logo">EC<span class="logo-dot">.</span></a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Header / Hero Section -->
     <header class="section hero" id="home">
-        <div class="container hero-content">
-            <p class="greeting">Hello, I'm</p>
+        <div class="container hero-content floating-hero">
+            <p class="greeting glitched-text" data-text="Hello, I'm">Hello, I'm</p>
             <h1 class="hero-title" title="My name">Eiren Luxiel Castano</h1>
             <p class="hero-subtitle">
                 Aspiring Web Developer specializing in
-                <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span
-                    class="highlight">JavaScript</span>.
+                <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>.
             </p>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#projects" class="btn btn-primary glow-btn">Explore My Universe</a>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
         </div>
     </header>
 
     <main>
         <!-- About Me Section -->
         <section id="about" class="section about-section">
-            <div class="container">
+            <div class="container glass-panel reveal-on-scroll">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
-                    <div class="about-image-wrapper">
+                    <div class="about-image-wrapper floating-element">
+                        <div class="glow-ring"></div>
                         <img class="profile-img" src="./image/DSCN2988.JPG" alt="Eiren Luxiel Castano">
                     </div>
                     <div class="about-text">
                         <p>
                             I am a passionate student learning Web Development. I enjoy creating
                             structured, interactive, and beautiful websites. I am constantly learning
-                            and expanding my skill set to build better digital experiences.
+                            and expanding my skill set to build better digital experiences that defy gravity.
                         </p>
                     </div>
                 </div>
@@ -63,20 +73,23 @@
 
         <!-- Skills Section -->
         <section id="skills" class="section skills-section">
-            <div class="container">
+            <div class="container reveal-on-scroll">
                 <h2 class="section-title">My Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card glass-panel floating-element delay-1">
+                        <div class="skill-icon html-icon">&lt;/&gt;</div>
                         <h3>HTML5</h3>
-                        <p>Semantic structuring and accessibility</p>
+                        <p>Semantic structuring and accessibility for the modern web.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card glass-panel floating-element delay-2">
+                        <div class="skill-icon css-icon">#</div>
                         <h3>CSS3</h3>
-                        <p>Responsive design and modern layouts (Flexbox/Grid)</p>
+                        <p>Responsive design, fluid layouts, and anti-gravity animations.</p>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card glass-panel floating-element delay-3">
+                        <div class="skill-icon js-icon">{}</div>
                         <h3>JavaScript</h3>
-                        <p>Dynamic content and interactivity</p>
+                        <p>Dynamic content, interactive particle networks, and logic.</p>
                     </div>
                 </div>
             </div>
@@ -84,84 +97,72 @@
 
         <!-- Project Section -->
         <section id="projects" class="section projects-section">
-            <div class="container">
+            <div class="container reveal-on-scroll">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid">
 
-                    <article class="project-card">
+                    <article class="project-card glass-panel">
                         <div class="project-info">
                             <h3>Student Schedule</h3>
                             <p>This is a sample HTML student schedule demonstrating table structures.</p>
                             <div class="project-links">
-                                <a href="https://github.com/Eiren12/student-schedule-castano" target="_blank"
-                                    class="btn btn-secondary">GitHub</a>
-                                <a href="https://vercel.com/eiren12s-projects/student-schedule-castano/8ww8vnvgWPjcqLXWGU4XLvim2scM"
-                                    target="_blank" class="btn btn-outline">Live Demo</a>
+                                <a href="https://github.com/Eiren12/student-schedule-castano" target="_blank" class="btn btn-secondary">GitHub</a>
+                                <a href="https://vercel.com/eiren12s-projects/student-schedule-castano/8ww8vnvgWPjcqLXWGU4XLvim2scM" target="_blank" class="btn btn-outline">Live Demo</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card glass-panel hover-glow">
                         <div class="project-info">
                             <h3>Registration Form</h3>
                             <p>A comprehensive HTML student registration form with input validation.</p>
                             <div class="project-links">
-                                <a href="https://github.com/Eiren12/student-registration-form-castano" target="_blank"
-                                    class="btn btn-secondary">GitHub</a>
-                                <a href="https://vercel.com/eiren12s-projects/student-registration-form-castano/EgfGeojXG153oWy27eu7DaM9Mc2J"
-                                    target="_blank" class="btn btn-outline">Live Demo</a>
+                                <a href="https://github.com/Eiren12/student-registration-form-castano" target="_blank" class="btn btn-secondary">GitHub</a>
+                                <a href="https://vercel.com/eiren12s-projects/student-registration-form-castano/EgfGeojXG153oWy27eu7DaM9Mc2J" target="_blank" class="btn btn-outline">Live Demo</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card glass-panel hover-glow">
                         <div class="project-info">
                             <h3>Study Playlists</h3>
                             <p>A multimedia-focused project showcasing embedded video and audio playlists.</p>
                             <div class="project-links">
-                                <a href="https://github.com/Eiren12/html-study-playlists-castano-eiren" target="_blank"
-                                    class="btn btn-secondary">GitHub</a>
-                                <a href="https://vercel.com/eiren12s-projects/html-study-playlists-castano-eiren/ahADPUn3BQ2uenycTK52eMVbH8rG"
-                                    target="_blank" class="btn btn-outline">Live Demo</a>
+                                <a href="https://github.com/Eiren12/html-study-playlists-castano-eiren" target="_blank" class="btn btn-secondary">GitHub</a>
+                                <a href="https://vercel.com/eiren12s-projects/html-study-playlists-castano-eiren/ahADPUn3BQ2uenycTK52eMVbH8rG" target="_blank" class="btn btn-outline">Live Demo</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card glass-panel hover-glow">
                         <div class="project-info">
                             <h3>IT Portal iFrame</h3>
                             <p>An exploration of nested web browsing and iframe integration.</p>
                             <div class="project-links">
-                                <a href="https://github.com/Eiren12/IT-PORTAL-IFRAME" target="_blank"
-                                    class="btn btn-secondary">GitHub</a>
-                                <a href="https://vercel.com/eiren12s-projects/it-portal-iframe" target="_blank"
-                                    class="btn btn-outline">Live Demo</a>
+                                <a href="https://github.com/Eiren12/IT-PORTAL-IFRAME" target="_blank" class="btn btn-secondary">GitHub</a>
+                                <a href="https://vercel.com/eiren12s-projects/it-portal-iframe" target="_blank" class="btn btn-outline">Live Demo</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card glass-panel hover-glow">
                         <div class="project-info">
                             <h3>IT Project Demo</h3>
                             <p>A demonstration of various HTML components and project layouts.</p>
                             <div class="project-links">
-                                <a href="https://github.com/Eiren12/IT-PROJECT-DEMO" target="_blank"
-                                    class="btn btn-secondary">GitHub</a>
-                                <a href="https://vercel.com/eiren12s-projects/it-project-demo" target="_blank"
-                                    class="btn btn-outline">Live Demo</a>
+                                <a href="https://github.com/Eiren12/IT-PROJECT-DEMO" target="_blank" class="btn btn-secondary">GitHub</a>
+                                <a href="https://vercel.com/eiren12s-projects/it-project-demo" target="_blank" class="btn btn-outline">Live Demo</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card glass-panel hover-glow">
                         <div class="project-info">
                             <h3>User Account Creation</h3>
                             <p>A sleek interface for user onboarding and account setup.</p>
                             <div class="project-links">
-                                <a href="https://github.com/Eiren12/user-account-creation" target="_blank"
-                                    class="btn btn-secondary">GitHub</a>
-                                <a href="https://vercel.com/eiren12s-projects/user-account-creation" target="_blank"
-                                    class="btn btn-outline">Live Demo</a>
+                                <a href="https://github.com/Eiren12/user-account-creation" target="_blank" class="btn btn-secondary">GitHub</a>
+                                <a href="https://vercel.com/eiren12s-projects/user-account-creation" target="_blank" class="btn btn-outline">Live Demo</a>
                             </div>
                         </div>
                     </article>
@@ -172,21 +173,19 @@
 
         <!-- Contact Section -->
         <section id="contact" class="section contact-section">
-            <div class="container">
+            <div class="container reveal-on-scroll">
                 <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-card">
-                    <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
-                        I'll try my best to get back to you!</p>
+                <div class="contact-card glass-panel floating-element">
+                    <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you! Let's build something out of this world.</p>
                     <div class="contact-details">
                         <p class="contact-item">
                             <span class="icon">📱</span> <strong>09491337739</strong>
                         </p>
                         <p class="contact-item">
-                            <span class="icon">✉️</span> <strong><a href="mailto:eirencastano@gmail.com"
-                                    class="highlight-link">eirencastano@gmail.com</a></strong>
+                            <span class="icon">✉️</span> <strong><a href="mailto:eirencastano@gmail.com" class="highlight-link">eirencastano@gmail.com</a></strong>
                         </p>
                     </div>
-                    <a href="mailto:eirencastano@gmail.com" class="btn btn-primary mt-4">Say Hello</a>
+                    <a href="mailto:eirencastano@gmail.com" class="btn btn-primary glow-btn mt-4">Send Message</a>
                 </div>
             </div>
         </section>
@@ -195,9 +194,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
-            <p>&copy; 2024 Eiren Luxiel Castano. Built with HTML & CSS.</p>
+            <p>&copy; 2024 Eiren Luxiel Castano. Floating through the web with HTML & CSS.</p>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 
 </html>
